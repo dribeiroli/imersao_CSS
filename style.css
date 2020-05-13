@@ -1,44 +1,95 @@
+/* soft reset do css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-image: url(https://mcdn.wallpapersafari.com/medium/3/49/MGBnDA.jpg);
+    background-color: rgb(3, 43, 70);
     background-size: auto 100vh;
-    background-position: center;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 12px;
+}
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/*breakpoint*/
+
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/*breakpoint*/
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+header {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu {
-    background-color: white;
+    /*  background-color: white; */
+    position: fixed;
+    width: 100vw;
+    top: 0;
 }
 
 .menu ul {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
-    background-color: teal;
-    border-radius: 10px;
-    padding: 10px;
+    background-color: white;
 }
 
-a {
+.menu a {
     text-decoration: none;
-    color: white;
-    background-color: rgb(73, 160, 160);
-    padding: 5px;
-    border-radius: 10px;
+    display: block;
+    padding: 10px 20px;
+    color: rgb(73, 160, 160);
 }
 
-a:hover {
-    background-color: rgb(12, 54, 88);
-    padding: 5px;
-    border-radius: 10px;
+.menu a:hover {
+    color: rgb(12, 54, 88);
 }
 
-.site-title, 
-.site-subtitle {
+.site-title, .site-subtitle {
     text-align: center;
     color: whitesmoke;
+}
+
+.site-title {
+    font-size: 2em;
 }
 
 .site-subtitle {
     font-style: italic;
 }
+
+/*a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(73, 160, 160);
+}
+
+a:hover {
+    background-color: rgb(12, 54, 88);
+}*/
